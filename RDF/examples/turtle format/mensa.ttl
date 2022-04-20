@@ -1,0 +1,30 @@
+@base<http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<#JohnGreen>
+a foaf:Person ;
+foaf:name "John Green" ;
+foaf:member <#Mensa> ;
+rel:friendOf <#MichaelBrown> .
+
+<#MichaelBrown>
+a foaf:Person ;
+foaf:name "Michael Brown" ;
+foaf:member <#Mensa> ;
+foaf:member <#IEEE> ;
+rel:friendOf <#JohnGreen> .
+
+<#JerryRed>
+a foaf:Person ;
+foaf:name "Jerry Red" ;
+foaf:member <#Mensa> ;
+foaf:currentProject "Using AI for social good" .
+
+<#Mensa>
+a foaf:Organization ;
+foaf:name "Mensa" .
+
+<#IEEE>
+a foaf:Organization ;
+foaf:name "IEEE" .
