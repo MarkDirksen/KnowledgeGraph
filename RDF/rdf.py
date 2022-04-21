@@ -1,5 +1,5 @@
 # %%
-from rdflib import Graph
+from rdflib import Graph, URIRef
 
 # Create a Graph
 g = Graph()
@@ -26,3 +26,11 @@ print(g.serialize(format="turtle"))
 
 
 # %%
+triplet = (URIRef('http://example.org/#JerryRed'),
+           URIRef('http://www.perceive.net/schemas/relationship/enemyOf'),
+           URIRef('http://example.org/#MichaelBrown'))
+g.add(triplet)
+
+
+# %%
+g.serialize(destination='examples/turtle format/mensa-plus.ttl')
